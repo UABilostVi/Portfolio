@@ -1,0 +1,171 @@
+@media only screen and (max-width: 1023px) {
+    .head-nav__item {
+        padding: 0 15px;
+    }
+
+    .head-nav {
+        margin: 0 -15px;
+    }
+
+    .visual {
+        padding: 140px 0 100px;
+    }
+
+    .visual__title {
+        font-size: 55px;
+    }
+
+    .visual__text {
+        font-size: 17px;
+    }
+
+    .testimonials__item {
+        min-height: 400px;
+        width: 100%;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .visual__title {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+
+    .visual__text {
+        font-size: 15px;
+    }
+
+    .features__item {
+        width: 50%;
+    }
+
+    .works__item {
+        width: 50%;
+    }
+
+    .our-team__item {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .footer__contacts-item {
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .footer__contacts {
+        padding-top: 15px;
+    }
+
+    .footer__text {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .nav-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 4;
+    }
+
+    .nav-btn::after,
+    .nav-btn::before,
+    .nav-btn span {
+        position: absolute;
+        height: 4px;
+        width: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        top: 18px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 3px;
+    }
+
+    .nav-btn::after,
+    .nav-btn::before {
+        content: '';
+    }
+
+    .nav-btn::after {
+        top: 12px;
+    }
+
+    .nav-btn::before {
+        top: 6px; 
+    }
+
+    .header-content {
+        padding: 15px 0;
+    }
+
+    .head-nav {
+        transition: all 0.3s ease-in-out;
+        padding-top: 80px;
+        opacity: 0;
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        left: 100%;
+        background: rgba(0, 0, 0, 0.9);   
+    }
+
+    .head-nav__item {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .head-nav__link {
+        font-size: 25px;
+    }
+
+    .menu-active {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .menu-active .head-nav {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+
+    .menu-active .nav-btn::after {
+        opacity: 0;
+    }
+
+    .menu-active .nav-btn::before {
+        top: 12px; 
+        left: 2px;
+        transform: rotate(45deg);
+    }
+
+    .menu-active .nav-btn span {
+        top: 12px;
+        left: 2px;
+        transform: rotate(-45deg);
+    }
+
+    .slide__text {
+        font-size: 25px;
+    }
+
+    .slideshow {
+        padding: 25px;
+    }
+
+    .testimonials__item {
+        min-height: 300px;
+    }
+}

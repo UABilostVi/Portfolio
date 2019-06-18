@@ -1,0 +1,44 @@
+// Heading font-size
+$h1-basic-font-size: 45px;
+$h2-basic-font-size: 38px;
+$h3-basic-font-size: 20px;
+$h4-basic-font-size: 20px;
+$h5-basic-font-size: 18px;
+$h6-basic-font-size: 16px;
+
+ h1,h2,h3,h4,h5,h6 {
+  font-family: 'montserrat';
+  font-weight: 700;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: $h1-basic-font-size;
+  color: #505050;
+  text-align: center;
+}
+
+h2{
+  font-size: $h2-basic-font-size;
+  text-align: center;
+}
+
+h3 {
+  font-size: $h3-basic-font-size;
+  font-family: 'merriweather';
+  font-weight: 700;
+}
+
+h4 {
+  font-size: $h4-basic-font-size;
+}
+
+h5 {
+  font-size: $h5-basic-font-size;
+}
+
+h6 {
+  font-size: $h6-basic-font-size;
+}

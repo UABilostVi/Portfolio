@@ -1150,7 +1150,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       border-radius: 10px;
       padding: 15px 30px;
       color: inherit;
-      font-size: 18px; }
+      font-size: 18px;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      .banner .banner-content a:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2); }
 
 .banner-1 {
   background-image: url(../images/banner-1.jpg); }
@@ -1208,6 +1215,10 @@ label {
     content: "\e904";
     font-family: 'icomoon';
     color: #000; }
+
+.slick-arrow:hover {
+  background: #fbd341;
+  border-radius: 50%; }
 
 .slick-next {
   -webkit-transform: rotateZ(-90deg);

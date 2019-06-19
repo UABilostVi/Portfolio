@@ -334,6 +334,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         padding: 15px 30px;
         color: inherit;
         font-size: 18px;
+        transition: all .3s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
   }
 }
@@ -408,6 +412,13 @@ label {
     content: "\e904";
     font-family: 'icomoon';
     color: $black;
+  }
+}
+
+.slick-arrow {
+  &:hover {
+    background: $orange;
+    border-radius: 50%;
   }
 }
 

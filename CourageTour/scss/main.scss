@@ -1,44 +1,43 @@
 // breakpoints for media
 $breakpoints: (
-  'xs-phone': 320px,
-  'phone': 480px,
-  'tablet': 768px,
-  'desktop': 992px,
-  'widescreen': 1200px
+  "xs-phone": 320px,
+  "phone": 480px,
+  "tablet": 768px,
+  "desktop": 992px,
+  "widescreen": 1200px
 );
 
 //fonts
-@import 'basic-settings/variables';
-@import 'common-settings/icons';
-@import 'slick/slick';
-@import 'slick/slick-theme';
-@import 'common-settings/include-media';
-@import 'common-settings/normalize';
-@import 'basic-settings/mixins';
-@import 'basic-settings/helpers';
-@import 'basic-settings/reset';
-@import 'basic-settings/heading-styles';
+@import "basic-settings/variables";
+@import "common-settings/icons";
+@import "slick/slick";
+@import "slick/slick-theme";
+@import "common-settings/include-media";
+@import "common-settings/normalize";
+@import "basic-settings/mixins";
+@import "basic-settings/helpers";
+@import "basic-settings/reset";
+@import "basic-settings/heading-styles";
 
 ::-webkit-scrollbar-track {
-  background-color:#ecedee
-  }
-  
-  ::-webkit-scrollbar-thumb {
+  background-color: #ecedee;
+}
+
+::-webkit-scrollbar-thumb {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background-color: $orange;
   width: 5px;
   height: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover{
-  background-color:#56999f;
-  }
-  
-  ::-webkit-scrollbar{
-  width: 4px;
-  }
+}
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: #56999f;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
 
 body {
   color: $base-text-color;
@@ -67,7 +66,7 @@ ul {
 
 h2 {
   font-size: 27px;
-  @include media('>=tablet') {
+  @include media(">=tablet") {
     font-size: $h2-basic-font-size;
   }
 }
@@ -80,7 +79,21 @@ a {
   }
 }
 
-div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+img,
+ol,
+ul,
+li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -110,7 +123,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .header-contacts {
   display: none;
-  @include media('>=tablet') {
+  @include media(">=tablet") {
     display: block;
     margin: 0 -20px;
     text-align: right;
@@ -121,21 +134,21 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       line-height: 1;
       padding: 15px 20px;
       color: $light-grey;
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        color: $orange;
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $orange;
+        }
+      }
+      .icon-facebook,
+      .icon-instagram {
+        font-size: 20px;
       }
     }
-    .icon-facebook,
-    .icon-instagram {
-      font-size: 20px;
-    }
-  }
-  li:last-child {
-      padding-left: 0; 
+    li:last-child {
+      padding-left: 0;
     }
   }
 }
@@ -148,13 +161,16 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   height: 30px;
   position: relative;
   z-index: 4;
-  @include media('>=tablet') {
+  @include media(">=tablet") {
     display: none;
   }
-  &:after, &:before {
-    content: '';
+  &:after,
+  &:before {
+    content: "";
   }
-  &:after, &:before, & span {
+  &:after,
+  &:before,
+  & span {
     position: absolute;
     height: 4px;
     width: 26px;
@@ -169,13 +185,13 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     top: 12px;
   }
   &:before {
-    top: 6px; 
+    top: 6px;
   }
   .menu-active &::after {
     opacity: 0;
   }
   .menu-active &::before {
-    top: 12px; 
+    top: 12px;
     left: 2px;
     transform: rotate(45deg);
   }
@@ -207,14 +223,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   width: 200px;
   background-color: $orange;
   height: 100vh;
-  @include media('>=tablet') {
+  @include media(">=tablet") {
     position: static;
     height: auto;
     width: 100%;
     background: transparent;
   }
   > ul {
-    @include media('>=tablet') {
+    @include media(">=tablet") {
       background-color: $orange;
       border-radius: 15px;
     }
@@ -223,41 +239,40 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       line-height: 1.2;
       font-weight: bold;
       position: relative;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       &:hover {
-        
-          a {
-            color: $white;
-            span {
-              transform: rotateZ(-90deg);
-            }
+        a {
+          color: $white;
+          span {
+            transform: rotateZ(-90deg);
           }
+        }
         .dropdown {
           display: block;
           opacity: 1;
           visibility: visible;
         }
       }
-      @include media('>=tablet') {
+      @include media(">=tablet") {
         display: inline-block;
         vertical-align: top;
       }
-      @include media('>=desktop') {
+      @include media(">=desktop") {
         font-size: 18px;
       }
       > a {
-        color: $black;;
+        color: $black;
         padding: 15px 25px;
         display: inline-block;
         vertical-align: top;
-        @include media('>=tablet') {
+        @include media(">=tablet") {
           padding: 15px 15px;
         }
         span {
           display: inline-block;
           vertical-align: middle;
           padding-left: 5px;
-          transition: all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
         }
       }
     }
@@ -265,9 +280,9 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .dropdown {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: none;
-  @include media('>=tablet') {
+  @include media(">=tablet") {
     width: 240px;
     opacity: 0;
     display: block;
@@ -279,7 +294,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   > li {
     font-size: 14px;
     line-height: 1.2;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: rgba(51, 151, 226, 0.8);
     &:hover {
       background: $orange;
@@ -304,7 +319,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   .slick-dotted.slick-slider {
     margin-bottom: 0;
   }
-  
+
   .slick-dots {
     bottom: 25px;
   }
@@ -314,7 +329,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     color: #ceeff4;
     opacity: 1;
   }
-  .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  .slick-dots li button:hover:before,
+  .slick-dots li button:focus:before {
     opacity: 1;
     color: orange;
   }
@@ -325,37 +341,37 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   min-height: 230px;
   margin-top: 200px;
   position: relative;
-  @include media('>=desktop') {
+  @include media(">=desktop") {
     margin-top: 328px;
   }
   .banner-content {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: center;
-      @include media('>=tablet') {
-        text-align: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    @include media(">=tablet") {
+      text-align: left;
+    }
+    h1 {
+      color: $white;
+      margin-bottom: 45px;
+      font-size: 20px;
+      @include media(">=tablet") {
+        font-size: 30px;
       }
-      h1 {
-        color: $white;
-        margin-bottom: 45px;
-        font-size: 20px;
-        @include media('>=tablet') {
-          font-size: 30px;
-        }
+    }
+    a {
+      display: inline-block;
+      background-color: $orange;
+      border-radius: 10px;
+      padding: 15px 30px;
+      color: inherit;
+      font-size: 18px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
       }
-      a {
-        display: inline-block;
-        background-color: $orange;
-        border-radius: 10px;
-        padding: 15px 30px;
-        color: inherit;
-        font-size: 18px;
-        transition: all .3s ease-in-out;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
+    }
   }
 }
 
@@ -427,7 +443,7 @@ label {
   .slick-prev:before,
   .slick-next:before {
     content: "\e904";
-    font-family: 'icomoon';
+    font-family: "icomoon";
     color: $black;
   }
 }
@@ -486,28 +502,82 @@ label {
   padding: 45px 0 75px;
   h2 {
     text-transform: uppercase;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
+    @include media(">=desktop") {
+      text-align: left;
+      padding-bottom: 60px;
+    }
   }
   .advanteges-content {
-    font-size: 0;
-    line-height: 0;
-    display: flex;
-    align-items: center;
-    > * {
-      display: inline-block;
-      vertical-align: top;
+    @include media(">=desktop") {
+      display: flex;
+      align-items: center;
     }
     img {
-      max-width: 50%;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      @include media(">=desktop") {
+        max-width: 50%;
+        margin-bottom: 0;
+      }
     }
     .advanteges-text {
       font-size: 16px;
       line-height: 1.4;
-      max-width: 680px;
-      padding-left: 90px;
       overflow-y: scroll;
       height: 200px;
+      @include media(">=desktop") {
+        padding-left: 90px;
+        max-width: 680px;
+      }
     }
   }
 }
 
+//~~~~~~ tour-offer ~~~~~~
+
+.tour-offer {
+  background: url(../images/background-footer.jpg);
+  background-size: cover;
+  .tour-offer-wrapeer {
+    background-color: rgba(6, 10, 86, 0.55);
+    padding: 45px 0;
+    h2 {
+      text-align: left;
+      color: $white;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+  }
+  .tour-offer-form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 49px 40px;
+    input, select {
+      background-color: inherit;
+      border: none;
+      color: $white;
+      max-width: 140px;
+      padding: 6px 14px;
+      margin-right: 30px;
+      border-bottom: 1px solid grey;
+      outline: none;
+      option {
+        color: $black;
+      }
+    }
+    button {
+      display: inline-block;
+      background-color: $orange;
+      border-radius: 10px;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        // transform: scale(1.2);
+      }
+    }
+  }
+}

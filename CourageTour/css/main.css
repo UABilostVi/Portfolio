@@ -1101,15 +1101,12 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     max-width: 100%; }
   .visual .banner-wrapper {
     min-height: 100vh;
-    background-position: center; }
+    background-position: center;
+    background-size: cover; }
   .visual .slick-dotted.slick-slider {
     margin-bottom: 0; }
   .visual .slick-dots {
     bottom: 25px; }
-    @media (min-width: 768px) {
-      .visual .slick-dots {
-        left: 100px;
-        width: auto; } }
   .visual .slick-dots li button:before {
     font-size: 48px;
     color: #ceeff4;
@@ -1120,7 +1117,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .banner {
   background-color: rgba(0, 76, 132, 0.49);
-  max-width: 1350px;
   min-height: 230px;
   margin-top: 200px;
   position: relative; }

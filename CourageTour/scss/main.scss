@@ -19,6 +19,26 @@ $breakpoints: (
 @import 'basic-settings/reset';
 @import 'basic-settings/heading-styles';
 
+::-webkit-scrollbar-track {
+  background-color:#ecedee
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: $orange;
+  width: 5px;
+  height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+  background-color:#56999f;
+  }
+  
+  ::-webkit-scrollbar{
+  width: 4px;
+  }
+
 
 body {
   color: $base-text-color;
@@ -458,3 +478,36 @@ label {
     }
   }
 }
+
+// ~~~~~~~~ advantages ~~~~~~~~
+
+.advanteges {
+  background-color: #f8f7f7;
+  padding: 45px 0 75px;
+  h2 {
+    text-transform: uppercase;
+    padding-bottom: 60px;
+  }
+  .advanteges-content {
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    > * {
+      display: inline-block;
+      vertical-align: top;
+    }
+    img {
+      max-width: 50%;
+    }
+    .advanteges-text {
+      font-size: 16px;
+      line-height: 1.4;
+      max-width: 680px;
+      padding-left: 90px;
+      overflow-y: scroll;
+      height: 200px;
+    }
+  }
+}
+

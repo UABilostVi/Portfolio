@@ -1,0 +1,42 @@
+// Heading font-size
+$h1-basic-font-size: 66px;
+$h2-basic-font-size: 60px;
+$h3-basic-font-size: 32px;
+$h4-basic-font-size: 22px;
+$h5-basic-font-size: 18px;
+$h6-basic-font-size: 16px;
+
+ h1,h2,h3,h4,h5,h6 {
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+}
+
+h1 {
+  font-size: $h1-basic-font-size;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: $h2-basic-font-size;
+}
+
+h3 {
+  font-size: $h3-basic-font-size;
+  font-weight: 300;
+  letter-spacing: -1px;
+  letter-spacing: -0.8px;
+  margin-bottom: 42px;
+}
+
+h4 {
+  font-size: $h4-basic-font-size;
+}
+
+h5 {
+  font-size: $h5-basic-font-size;
+}
+
+h6 {
+  font-size: $h6-basic-font-size;
+}

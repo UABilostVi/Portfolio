@@ -1,0 +1,90 @@
+// breakpoints for media
+$breakpoints: (
+  "xs-phone": 320px,
+  "phone": 480px,
+  "tablet": 768px,
+  "desktop": 1024px,
+  "widescreen": 1200px
+);
+
+//fonts
+@import "basic-settings/variables";
+@import "common-settings/icons";
+@import "common-settings/include-media";
+@import "common-settings/normalize";
+@import "common-settings/_fonts";
+@import "basic-settings/reset";
+@import "basic-settings/heading-styles";
+
+body {
+  color: rgb(0, 255, 179);
+  background: $base-background-color;
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  min-width: $base-min-width;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  color: gray;
+  line-height: 24px;
+  font-family: $base-font-family;
+}
+
+a {
+  color: $base-link-color;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+img,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 970px;
+  padding: 0 15px;
+}
+
+.logo {
+  position: relative;
+  z-index: 33;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+

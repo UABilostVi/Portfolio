@@ -3,11 +3,14 @@ var  gulp = require("gulp"),
      autoprefixer = require("gulp-autoprefixer"),
      browserSync = require("browser-sync").create(),
      cssbeautify = require("gulp-cssbeautify"),
-     cleanCSS = require("gulp-clean-css");
+     cleanCSS = require("gulp-clean-css"),
+     uglify = require("gulp-uglify"),
+     pipeline = require('readable-stream').pipeline;
 
 var options = {
     scssFile: "./src/scss/*.scss",
     cssFolder: "./build/css/",
+    cssFiles: "./build/css/*.css",
     indexHtml: "./*.html"
 }
 
@@ -34,13 +37,23 @@ gulp.task('minify-css', () => {
       .pipe(gulp.dest('./build/css/min/'));
 })
 
+
+gulp.task('uglify', function () {
+    return pipeline(
+        gulp.src('./src/js/**/*.js'),
+        uglify(),
+        gulp.dest('./build/js')
+    );
+  });
+
 gulp.task('serve', function() {
     browserSync.init({
         server: './'
     });
-    gulp.watch(options.scssFile).on('change', gulp.series('compile-css', 'minify-css'));
+    gulp.watch(options.scssFile).on('change', gulp.series('compile-css'));
     gulp.watch(options.indexHtml).on('change', browserSync.reload);
-    gulp.watch("./build/css/*.css").on('change', gulp.series('minify-css'));
+    gulp.watch(options.cssFiles).on('change', gulp.series('minify-css'));
+    gulp.watch("./src/js/main.js").on('change', gulp.series('uglify'));
 })
 
 gulp.task('default', gulp.series('serve'));

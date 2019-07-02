@@ -8,13 +8,13 @@ $breakpoints: (
 );
 
 //fonts
-@import "basic-settings/_variables";
-@import "common-settings/_icons";
-@import "common-settings/_include-media";
-@import "common-settings/_normalize";
-@import "common-settings/_fonts";
+@import "basic-settings/variables";
+@import "common-settings/icons";
+@import "common-settings/include-media";
+@import "common-settings/normalize";
+@import "common-settings/fonts";
 @import "basic-settings/reset";
-@import "basic-settings/_heading-styles";
+@import "basic-settings/heading-styles";
 
 body {
   background: $base-background-color;
@@ -86,11 +86,13 @@ li {
   left: 0;
   width: 100%;
   z-index: 99;
-  background: rgba(229, 255, 0, 0.548);
+  background: rgba(78, 87, 87, 0.9);
+  border-bottom: 1px solid tomato;
   .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // border-bottom: 1px solid tomato;
   }
 }
 
@@ -99,15 +101,19 @@ li {
     ul {
       li {
         line-height: 1.2;
-        font-size: 22px;
+        font-size: 18px;
         a {
           position: relative;
-          padding: 52px 15px;
+          padding: 54px 15px;
           display: inline-block;
           vertical-align: top;
           transition: ease-in-out .5s;
-          span {
-            
+          text-transform: uppercase;
+          color: #deae19;
+          font-weight: bold;
+          &:hover {
+            color: #fff;
+	          text-decoration: none;
           }
         }
       }
@@ -129,10 +135,6 @@ ul li a span {
 	transition: transform .5s;
 }
 
-ul li a:hover {
-	color: #fff;
-	text-decoration: none;
-}
 ul li a:hover span {
 	transform-origin: bottom;
   transform: scaleY(1);
@@ -165,3 +167,14 @@ ul li a span:nth-child(4) {
 }
 
 // ~~~~~~~~~~
+
+main {
+  background-image: url('../../img/banner.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.main-wrapper {
+  height: 100vh;
+  background-color: rgba($color: rgb(78, 87, 87), $alpha: 0.5);
+}

@@ -615,7 +615,7 @@ p {
   font-family: "brandon_grotesque", "Arial", "Helvetica Neue", "Helvetica", sans-serif; }
 
 a {
-  color: #7690c5; }
+  color: #000; }
   a:hover, a:focus {
     text-decoration: none; }
 
@@ -659,7 +659,8 @@ li {
   left: 0;
   width: 100%;
   z-index: 99;
-  background: rgba(229, 255, 0, 0.548); }
+  background: rgba(78, 87, 87, 0.9);
+  border-bottom: 1px solid tomato; }
   .header .header-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -673,15 +674,21 @@ li {
 
 .navigation .drop ul li {
   line-height: 1.2;
-  font-size: 22px; }
+  font-size: 18px; }
   .navigation .drop ul li a {
     position: relative;
-    padding: 52px 15px;
+    padding: 54px 15px;
     display: inline-block;
     vertical-align: top;
     -webkit-transition: ease-in-out .5s;
     -o-transition: ease-in-out .5s;
-    transition: ease-in-out .5s; }
+    transition: ease-in-out .5s;
+    text-transform: uppercase;
+    color: #deae19;
+    font-weight: bold; }
+    .navigation .drop ul li a:hover {
+      color: #fff;
+      text-decoration: none; }
 
 ul li a span {
   position: absolute;
@@ -700,10 +707,6 @@ ul li a span {
   -o-transition: transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s; }
-
-ul li a:hover {
-  color: #fff;
-  text-decoration: none; }
 
 ul li a:hover span {
   -webkit-transform-origin: bottom;
@@ -746,3 +749,12 @@ ul li a span:nth-child(4) {
   transition-delay: 0.45s;
   position: absolute;
   top: 0; }
+
+main {
+  background-image: url("../../img/banner.jpg");
+  background-size: cover;
+  height: 100vh; }
+
+.main-wrapper {
+  height: 100vh;
+  background-color: rgba(78, 87, 87, 0.5); }

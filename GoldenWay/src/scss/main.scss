@@ -86,13 +86,12 @@ li {
   left: 0;
   width: 100%;
   z-index: 99;
-  background: rgba(78, 87, 87, 0.9);
-  border-bottom: 1px solid tomato;
+  // background: rgba(78, 87, 87, 1);
   .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border-bottom: 1px solid tomato;
+    border-bottom: 1px solid rgb(172, 55, 55);
   }
 }
 
@@ -109,7 +108,7 @@ li {
           vertical-align: top;
           transition: ease-in-out .5s;
           text-transform: uppercase;
-          color: #deae19;
+          color: rgb(218, 213, 185);
           font-weight: bold;
           &:hover {
             color: #fff;
@@ -128,7 +127,7 @@ ul li a span {
 	position: absolute;
 	width: 25%;
 	height: 100%;
-	background-color: tomato;
+	background-color: rgb(172, 55, 55);
 	z-index: -1;
 	transform-origin: top;
 	transform: scaleY(0);
@@ -169,12 +168,12 @@ ul li a span:nth-child(4) {
 // ~~~~~~~~~~
 
 main {
-  background-image: url('../../img/banner.jpg');
+  background-image: url('../../img/banner2.jpg');
   background-size: cover;
   height: 100vh;
 }
 
 .main-wrapper {
   height: 100vh;
-  background-color: rgba($color: rgb(78, 87, 87), $alpha: 0.5);
+  background-color: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
 }

@@ -8,26 +8,18 @@ $breakpoints: (
 );
 
 //fonts
-@import "basic-settings/variables";
-@import "common-settings/icons";
-@import "common-settings/include-media";
-@import "common-settings/normalize";
+@import "basic-settings/_variables";
+@import "common-settings/_icons";
+@import "common-settings/_include-media";
+@import "common-settings/_normalize";
 @import "common-settings/_fonts";
 @import "basic-settings/reset";
-@import "basic-settings/heading-styles";
+@import "basic-settings/_heading-styles";
 
 body {
-  color: rgb(179, 1, 1);
   background: $base-background-color;
   font: #{$base-font-size}/#{$base-line-height} $base-font-family;
   min-width: $base-min-width;
-}
-
-#wrapper {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
 }
 
 img {
@@ -69,15 +61,23 @@ li {
   border: 0;
 }
 
+#wrapper {
+  position: relative;
+  width: 100%;
+  // overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
-  max-width: 970px;
+  max-width: 1270px;
   padding: 0 15px;
 }
 
 .logo {
   position: relative;
   z-index: 33;
+  max-width: 150px;
+  padding: 10px;
 }
 
 .header {
@@ -86,5 +86,82 @@ li {
   left: 0;
   width: 100%;
   z-index: 99;
+  background: rgba(229, 255, 0, 0.548);
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
+.navigation {
+  .drop {
+    ul {
+      li {
+        line-height: 1.2;
+        font-size: 22px;
+        a {
+          position: relative;
+          padding: 52px 15px;
+          display: inline-block;
+          vertical-align: top;
+          transition: ease-in-out .5s;
+          span {
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ~~~~ hover menu ~~~~~~
+
+ul li a span {
+	position: absolute;
+	width: 25%;
+	height: 100%;
+	background-color: tomato;
+	z-index: -1;
+	transform-origin: top;
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+
+ul li a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+ul li a:hover span {
+	transform-origin: bottom;
+  transform: scaleY(1);
+  position: absolute;
+  top: 0;
+}
+ul li a span:nth-child(1) {
+	left: 0;
+  transition-delay: 0s;
+  position: absolute;
+  top: 0;
+}
+ul li a span:nth-child(2) {
+	left: 25%;
+  transition-delay: 0.15s;
+  position: absolute;
+  top: 0;
+}
+ul li a span:nth-child(3) {
+	left: 50%;
+  transition-delay: 0.3s;
+  position: absolute;
+  top: 0;
+}
+ul li a span:nth-child(4) {
+	left: 75%;
+  transition-delay: 0.45s;
+  position: absolute;
+  top: 0;
+}
+
+// ~~~~~~~~~~

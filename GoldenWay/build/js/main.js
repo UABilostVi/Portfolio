@@ -1,1 +1,1 @@
-var i=5,v=66;function y(){return i+v}function res(){return i*v}
+var i=5,v=66;function y(){return i+v}function x(){return x}

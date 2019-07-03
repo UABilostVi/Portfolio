@@ -89,7 +89,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(172, 55, 55);
+    border-bottom: 1px solid $red;
   }
 }
 
@@ -137,7 +137,7 @@ ul li a span {
 	position: absolute;
 	width: 25%;
 	height: 100%;
-	background-color: rgb(172, 55, 55);
+	background-color: $red;
 	z-index: -1;
 	transform-origin: top;
 	transform: scaleY(0);
@@ -177,15 +177,17 @@ ul li a span:nth-child(4) {
 
 // ~~~~~~~~~~
 
-main {
+.main-wrapper {
   background-image: url('../../img/banner2.jpg');
   background-size: cover;
-  height: 100vh;
-  .main-wrapper {
-    height: 100vh;
+  min-height: 100vh;
+  .main-holder {
+    min-height: 100vh;
+    padding-top: 117px;
     background-color: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
   }
 }
+
 
 
 //~~~~~~~~~~~~~
@@ -212,7 +214,7 @@ main {
     width: 26px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgb(172, 55, 55);
+    background: $red;
     top: 18px;
     transition: all 0.3s ease-in-out;
     border-radius: 3px;
@@ -256,14 +258,17 @@ main {
         display: block;
         a {
           padding: 15px;
-          color: rgb(172, 55, 55);
+          color: $red;
         }
       }
     }
   }
 }
 
-
+.proba {
+  background: #000;
+  height: 200px;
+}
 
 
 

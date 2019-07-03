@@ -762,12 +762,13 @@ ul li a span:nth-child(4) {
   position: absolute;
   top: 0; }
 
-main {
+.main-wrapper {
   background-image: url("../../img/banner2.jpg");
   background-size: cover;
-  height: 100vh; }
-  main .main-wrapper {
-    height: 100vh;
+  min-height: 100vh; }
+  .main-wrapper .main-holder {
+    min-height: 100vh;
+    padding-top: 117px;
     background-color: rgba(151, 126, 58, 0.5); }
 
 .menu-opener {
@@ -834,3 +835,7 @@ main {
       .menu-active .drop ul li a {
         padding: 15px;
         color: #ac3737; }
+
+.proba {
+  background: #000;
+  height: 200px; }

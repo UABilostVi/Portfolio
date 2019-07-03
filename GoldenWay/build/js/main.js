@@ -1,1 +1,1 @@
-var i=5,v=66;function y(){return i+v}function x(){return x}
+function initMenu(){var n=jQuery(".menu-opener"),e=jQuery("html");n.on("click",function(n){n.preventDefault(),e.toggleClass("menu-active")})}jQuery(function(){initMenu()});

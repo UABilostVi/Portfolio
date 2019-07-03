@@ -64,7 +64,6 @@ li {
 #wrapper {
   position: relative;
   width: 100%;
-  // overflow: hidden;
 }
 
 .container {
@@ -86,7 +85,6 @@ li {
   left: 0;
   width: 100%;
   z-index: 99;
-  // background: rgba(78, 87, 87, 1);
   .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -97,10 +95,22 @@ li {
 
 .navigation {
   .drop {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    @include media('>=tablet') {
+      opacity: 1;
+      display: block;
+      visibility: visible;
+      position: static;
+    }
     ul {
       li {
         line-height: 1.2;
-        font-size: 18px;
+        font-size: 15px;
+        @include media('>=desktop') {
+          font-size: 18px;
+        }
         a {
           position: relative;
           padding: 54px 15px;
@@ -171,9 +181,90 @@ main {
   background-image: url('../../img/banner2.jpg');
   background-size: cover;
   height: 100vh;
+  .main-wrapper {
+    height: 100vh;
+    background-color: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
+  }
 }
 
-.main-wrapper {
-  height: 100vh;
-  background-color: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
+
+//~~~~~~~~~~~~~
+
+
+.menu-opener {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 4;
+  @include media(">=tablet") {
+    display: none;
+  }
+  &:after,
+  &:before {
+    content: "";
+  }
+  &:after,
+  &:before,
+  & span {
+    position: absolute;
+    height: 4px;
+    width: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(172, 55, 55);
+    top: 18px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  &:after {
+    top: 12px;
+  }
+  &:before {
+    top: 6px;
+  }
+  .menu-active &::after {
+    opacity: 0;
+  }
+  .menu-active &::before {
+    top: 12px;
+    left: 2px;
+    transform: rotate(45deg);
+  }
+  .menu-active & span {
+    top: 12px;
+    left: 2px;
+    transform: rotate(-45deg);
+  }
 }
+.menu-active {
+  height: 100vh;
+  overflow: hidden;
+  .drop {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    top: 129px;
+    left: 0;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba($color: rgb(151, 126, 58), $alpha: 0.8);
+    ul {
+      li {
+        display: block;
+        a {
+          padding: 15px;
+          color: rgb(172, 55, 55);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

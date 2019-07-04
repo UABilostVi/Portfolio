@@ -673,8 +673,12 @@ li {
 
 .navigation .drop {
   position: absolute;
+  left: 100%;
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s; }
   @media (min-width: 768px) {
     .navigation .drop {
       opacity: 1;
@@ -836,6 +840,77 @@ ul li a span:nth-child(4) {
         padding: 15px;
         color: #ac3737; }
 
-.proba {
-  background: #000;
-  height: 200px; }
+.contacts {
+  background-image: url("../../img/banner1.jpg");
+  background-position: center center;
+  background-size: cover; }
+
+.contacts-bg {
+  background: rgba(151, 126, 58, 0.5); }
+
+@media (min-width: 768px) {
+  .contacts-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 -13px; }
+    .contacts-wrapper .contacts-item {
+      padding: 0 13px;
+      width: 50%; } }
+
+.contacts-wrapper .contacts-item {
+  color: white;
+  font-size: 15px;
+  font-weight: 200; }
+  .contacts-wrapper .contacts-item div {
+    font-family: 'raleway';
+    font-weight: 200;
+    line-height: 24px; }
+    .contacts-wrapper .contacts-item div a {
+      color: inherit;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      .contacts-wrapper .contacts-item div a:hover {
+        color: #ac3737; }
+  .contacts-wrapper .contacts-item .contacts-item-holder {
+    background: rgba(2, 22, 35, 0.88); }
+
+.contacts-wrapper .form-holder form {
+  padding: 0 32px; }
+  .contacts-wrapper .form-holder form .row {
+    border-bottom: 1px solid #667681; }
+    .contacts-wrapper .form-holder form .row > * {
+      border: none;
+      outline: none; }
+    .contacts-wrapper .form-holder form .row input, .contacts-wrapper .form-holder form .row textarea {
+      padding-bottom: 18px;
+      padding-top: 30px;
+      background: transparent; }
+    .contacts-wrapper .form-holder form .row textarea {
+      height: 135px;
+      resize: none; }
+    .contacts-wrapper .form-holder form .row button {
+      margin: 38px 0;
+      color: black;
+      background: #deae1a;
+      border-radius: 3px;
+      font-size: 18px;
+      padding: 20px 40px;
+      text-transform: uppercase; }
+
+.contacts-wrapper .map-wrapper {
+  padding: 32px 23px 20px 23px; }
+  .contacts-wrapper .map-wrapper > div {
+    margin-bottom: 26px; }
+  .contacts-wrapper .map-wrapper iframe {
+    width: 100%;
+    min-height: 225px; }

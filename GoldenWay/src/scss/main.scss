@@ -96,8 +96,10 @@ li {
 .navigation {
   .drop {
     position: absolute;
+    left: 100%;
     visibility: hidden;
     opacity: 0;
+    transition: ease-in-out 0.3s;
     @include media('>=tablet') {
       opacity: 1;
       display: block;
@@ -265,9 +267,92 @@ ul li a span:nth-child(4) {
   }
 }
 
-.proba {
-  background: #000;
-  height: 200px;
+
+
+
+.contacts {
+  background-image: url('../../img/banner1.jpg');
+  background-position: center center;
+  background-size: cover;
+  
+}
+
+.contacts-bg {
+  background: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
+}
+
+.contacts-wrapper { 
+  @include media('>=tablet') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -13px;
+    .contacts-item {
+      padding: 0 13px;
+      width: 50%;
+    }
+  }
+  .contacts-item {
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    div {
+      font-family: 'raleway';
+      font-weight: 200;
+      line-height: 24px;
+      a {
+        color: inherit;
+        transition: all .3s ease-in-out;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+    .contacts-item-holder {
+      background:rgba(2, 22, 35, 0.88); 
+    }
+  }
+  .form-holder {
+    form {
+      padding: 0 32px;
+      .row {
+        border-bottom: 1px solid #667681;
+        > * {
+          border: none;
+          outline: none;
+        }
+        input, textarea {
+          padding-bottom: 18px;
+          padding-top: 30px;
+          background: transparent;
+        }
+        textarea {
+          height: 135px;
+          resize: none;
+        }
+        button {
+          margin: 38px 0;
+          color: black;
+          background: $golden;
+          border-radius: 3px;
+          font-size: 18px;
+          padding: 20px 40px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .map-wrapper {
+    padding: 32px 23px 20px 23px;
+    > div {
+      margin-bottom: 26px;
+    }
+    iframe {
+      width: 100%;
+      min-height: 225px;
+    }
+  }
 }
 
 

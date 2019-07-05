@@ -302,7 +302,7 @@ ul li a span:nth-child(4) {
       font-weight: 200;
       line-height: 24px;
       a {
-        color: inherit;
+        color: #fff;
         transition: all .3s ease-in-out;
         &:hover {
           color: $red;
@@ -310,14 +310,14 @@ ul li a span:nth-child(4) {
       }
     }
     .contacts-item-holder {
-      background:rgba(2, 22, 35, 0.88); 
+      background: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
     }
   }
   .form-holder {
     form {
       padding: 0 32px;
       .row {
-        border-bottom: 1px solid #667681;
+        border-bottom: 1px solid #fff;
         > * {
           border: none;
           outline: none;
@@ -326,10 +326,13 @@ ul li a span:nth-child(4) {
           padding-bottom: 18px;
           padding-top: 30px;
           background: transparent;
+          width: 100%;
         }
         textarea {
           height: 135px;
           resize: none;
+          color: #fff;
+          
         }
         button {
           margin: 38px 0;
@@ -353,6 +356,11 @@ ul li a span:nth-child(4) {
       min-height: 225px;
     }
   }
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #fff;
 }
 
 

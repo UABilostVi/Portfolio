@@ -1,8 +1,8 @@
 @font-face
 {
  font-family: 'icomoon';
- src: url("../fonts/icomoon.eot?256sql");
- src: url("../fonts/icomoon.eot?256sql#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?256sql") format("truetype"), url("../fonts/icomoon.woff?256sql") format("woff"), url("../fonts/icomoon.svg?256sql#icomoon") format("svg");
+ src: url("../../icons/icomoon.eot?mfvjn5");
+ src: url("../../icons/icomoon.eot?mfvjn5#iefix") format("embedded-opentype"), url("../../icons/icomoon.ttf?mfvjn5") format("truetype"), url("../../icons/icomoon.woff?mfvjn5") format("woff"), url("../../icons/icomoon.svg?mfvjn5#icomoon") format("svg");
  font-weight: normal;
  font-style: normal;
 }
@@ -11,7 +11,6 @@
 {
   /* use !important to prevent issues with browser extensions that change fonts */
  font-family: 'icomoon' !important;
- speak: none;
  font-style: normal;
  font-weight: normal;
  font-variant: normal;
@@ -22,79 +21,19 @@
  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-man-user:before
+.icon-facebook:before
 {
- content: "\e900";
+ content: "\ea91";
 }
 
-.icon-web-design-service:before
+.icon-instagram:before
 {
- content: "\e901";
+ content: "\ea92";
 }
 
-.icon-smartphone:before
+.icon-linkedin:before
 {
- content: "\e902";
-}
-
-.icon-video-camera:before
-{
- content: "\e903";
-}
-
-.icon-google-plus-logo:before
-{
- content: "\e904";
-}
-
-.icon-three:before
-{
- content: "\e905";
-}
-
-.icon-multiply:before
-{
- content: "\e906";
-}
-
-.icon-pinterest-logo:before
-{
- content: "\e907";
-}
-
-.icon-star:before
-{
- content: "\e908";
-}
-
-.icon-message-closed-envelope:before
-{
- content: "\e909";
-}
-
-.icon-twitter-logo-silhouette:before
-{
- content: "\e90a";
-}
-
-.icon-facebook-logo:before
-{
- content: "\e90b";
-}
-
-.icon-camera:before
-{
- content: "\e90f";
-}
-
-.icon-envelop:before
-{
- content: "\e945";
-}
-
-.icon-mobile:before
-{
- content: "\e958";
+ content: "\eac9";
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -874,6 +813,10 @@ ul li a span:nth-child(4) {
     font-family: 'raleway';
     font-weight: 200;
     line-height: 24px; }
+    .contacts-wrapper .contacts-item div li {
+      font-size: 30px;
+      line-height: 1.2;
+      padding: 10px; }
     .contacts-wrapper .contacts-item div a {
       color: #fff;
       -webkit-transition: all .3s ease-in-out;
@@ -912,7 +855,7 @@ ul li a span:nth-child(4) {
 .contacts-wrapper .map-wrapper {
   padding: 32px 23px 20px 23px; }
   .contacts-wrapper .map-wrapper > div {
-    margin-bottom: 26px; }
+    margin-bottom: 10px; }
   .contacts-wrapper .map-wrapper iframe {
     width: 100%;
     min-height: 225px; }

@@ -579,7 +579,8 @@ li {
 
 #wrapper {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 .container {
   margin: 0 auto;

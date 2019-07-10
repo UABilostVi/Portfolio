@@ -188,6 +188,25 @@ ul li a span:nth-child(4) {
     min-height: 100vh;
     padding-top: 117px;
     background-color: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: 25px;
+      @include media('>=tablet') {
+        font-size: 35px;
+      }
+      @include media('>=desktop') {
+        font-size: 45px;
+      }
+    }
+    h2 {
+      font-size: 20px;
+      @include media('>=tablet') {
+        font-size: 25px;
+      }
+    }
   }
 }
 

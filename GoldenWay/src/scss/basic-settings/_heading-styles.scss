@@ -1,6 +1,6 @@
 // Heading font-size
-$h1-basic-font-size: 66px;
-$h2-basic-font-size: 60px;
+$h1-basic-font-size: 35px;
+$h2-basic-font-size: 25px;
 $h3-basic-font-size: 32px;
 $h4-basic-font-size: 22px;
 $h5-basic-font-size: 18px;
@@ -15,10 +15,12 @@ $h6-basic-font-size: 16px;
 h1 {
   font-size: $h1-basic-font-size;
   text-transform: uppercase;
+  color: #fff;
 }
 
 h2{
   font-size: $h2-basic-font-size;
+  color: #fff;
 }
 
 h3 {

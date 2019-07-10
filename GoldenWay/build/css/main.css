@@ -36,6 +36,16 @@
  content: "\eac9";
 }
 
+.icon-metro:before
+{
+ content: "\e900";
+}
+
+.icon-location:before
+{
+ content: "\e947";
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -857,8 +867,7 @@ ul li a span:nth-child(4) {
 .contacts-wrapper .form-holder form {
   padding: 0 32px; }
   .contacts-wrapper .form-holder form .row {
-    border-bottom: 1px solid #fff;
-    padding-left: 15px; }
+    border-bottom: 1px solid #fff; }
     .contacts-wrapper .form-holder form .row > * {
       border: none;
       outline: none; }

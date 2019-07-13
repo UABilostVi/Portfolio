@@ -294,11 +294,11 @@ ul li a span:nth-child(4) {
   background-image: url('../../img/banner1.jpg');
   background-position: center center;
   background-size: cover;
-  
 }
 
 .contacts-bg {
   background: rgba($color: rgb(151, 126, 58), $alpha: 0.5);
+  padding: 40px 0;
 }
 
 .contacts-wrapper { 
@@ -388,6 +388,29 @@ textarea::-webkit-input-placeholder {
   color: #fff;
 }
 
-
+.services {
+  padding: 40px 0;
+  h3, h4 {
+    text-align: center;
+  }
+  .services-holder {
+    font-size: 0;
+    line-height: 0;
+    margin: 0 -15px;
+    .services-item {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 1.2;
+      max-width: 33.33%;
+      padding: 15px;
+      @include media('<=desktop') {
+        max-width: 50%;
+      }
+      @include media('<=tablet') {
+        max-width: 100%;
+      }
+    }
+  }
+}
 
 

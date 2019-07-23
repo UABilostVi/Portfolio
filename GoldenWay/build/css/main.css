@@ -796,25 +796,22 @@ ul li a span:nth-child(4) {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
-.menu-active {
-  height: 100vh;
-  overflow: hidden; }
-  .menu-active .drop {
-    visibility: visible;
-    opacity: 1;
-    position: absolute;
-    width: 100%;
-    top: 129px;
-    left: 0;
-    text-align: center;
-    height: 100vh;
-    overflow: hidden;
-    background-color: rgba(151, 126, 58, 0.8); }
-    .menu-active .drop ul li {
-      display: block; }
-      .menu-active .drop ul li a {
-        padding: 15px;
-        color: #ac3737; }
+.menu-active .drop {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  top: 129px;
+  left: 0;
+  text-align: center;
+  height: calc(100vh - 129px);
+  overflow: hidden;
+  background-color: rgba(151, 126, 58, 0.8); }
+  .menu-active .drop ul li {
+    display: block; }
+    .menu-active .drop ul li a {
+      padding: 15px;
+      color: #ac3737; }
 
 .contacts {
   background-image: url("../../img/banner1.jpg");
@@ -922,3 +919,5 @@ textarea::-webkit-input-placeholder {
       @media (max-width: 768px) {
         .services .services-holder .services-item {
           max-width: 100%; } }
+      .services .services-holder .services-item img {
+        margin-bottom: 10px; }

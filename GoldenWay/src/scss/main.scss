@@ -262,8 +262,6 @@ ul li a span:nth-child(4) {
   }
 }
 .menu-active {
-  height: 100vh;
-  overflow: hidden;
   .drop {
     visibility: visible;
     opacity: 1;
@@ -272,7 +270,7 @@ ul li a span:nth-child(4) {
     top: 129px;
     left: 0;
     text-align: center;
-    height: 100vh;
+    height: calc(100vh - 129px);
     overflow: hidden;
     background-color: rgba($color: rgb(151, 126, 58), $alpha: 0.8);
     ul {
@@ -408,6 +406,9 @@ textarea::-webkit-input-placeholder {
       }
       @include media('<=tablet') {
         max-width: 100%;
+      }
+      img {
+        margin-bottom: 10px;
       }
     }
   }

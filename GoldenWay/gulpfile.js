@@ -27,7 +27,6 @@ gulp.task("compile-css", function() {
             openbrace: "separate-line",
             autosemicolon: true
         }))
-        
         .pipe(gulp.dest(options.cssFolder))
         .pipe(browserSync.stream());
 });
@@ -65,7 +64,7 @@ gulp.task('serve', function() {
     gulp.watch(options.indexHtml).on('change', browserSync.reload)
     gulp.watch(options.cssFiles).on('change', gulp.series('minify-css'))
     gulp.watch("./src/js/main.js").on('change', gulp.series('uglify'))
-    gulp.watch('./src/img/**').on('change', gulp.series('imgcompres'));
+    gulp.watch("./src/img/**").on('all', gulp.series('imgcompres'));
 });
 
 gulp.task('default', gulp.series('serve'));

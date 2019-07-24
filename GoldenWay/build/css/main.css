@@ -631,7 +631,7 @@ li {
   -webkit-transition: ease-in-out 0.3s;
   -o-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .navigation .drop {
       opacity: 1;
       display: block;
@@ -642,10 +642,10 @@ li {
     font-size: 15px; }
     @media (min-width: 1024px) {
       .navigation .drop ul li {
-        font-size: 18px; } }
+        font-size: 14px; } }
     .navigation .drop ul li a {
       position: relative;
-      padding: 54px 15px;
+      padding: 56px 15px;
       display: inline-block;
       vertical-align: top;
       -webkit-transition: ease-in-out .5s;
@@ -757,7 +757,7 @@ ul li a span:nth-child(4) {
   height: 30px;
   position: relative;
   z-index: 4; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .menu-opener {
       display: none; } }
   .menu-opener:after, .menu-opener:before {
